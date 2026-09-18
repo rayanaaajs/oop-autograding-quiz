@@ -8,10 +8,11 @@ package id.ac.polinema.oop;
  * the autograder calls them exactly as defined here.
  */
 public class Student {
-    private String studentId;
-    private String name;
-    private double gpa;
 
+    // TODO: add fields: studentId (String), name (String), gpa (double)
+    private  String studenId;
+    private  String name;
+    private  double gpa;
     /**
      * Student constructor.
      *
@@ -20,20 +21,24 @@ public class Student {
      * @param gpa       Grade Point Average (0.0 - 4.0)
      */
     public Student(String studentId, String name, double gpa) {
-        this.studentId = studentId;
+        // TODO: store parameters into fields
+        this.studenId = studentId;
         this.name = name;
         this.gpa = gpa;
     }
 
     public String getStudentId() {
-        return studentId;
+        // TODO: return studentId
+        return studenId;
     }
 
     public String getName() {
+        // TODO: return name
         return name;
     }
 
     public double getGpa() {
+        // TODO: return gpa
         return gpa;
     }
 
@@ -46,16 +51,13 @@ public class Student {
      * @return graduation predicate
      */
     public String getPredicate() {
-       if (gpa >= 3.5) {
-        return  "Cum laude";
-       }
-
-       if (gpa <= 3.5) {
-        return "very satisfactory";
-       }
-
-       if (gpa < 3.0) {
-        return "satisfactory";
-       }
+        // TODO: implement the predicate logic per the rules above
+        if (gpa >= 3.5) {
+            return "Cum Laude";
+        } else if (gpa < 3.5 || gpa <= 3) {
+            return "Very Satisfactory";
+        } else {
+            return  "Satisfactory";
+        }
     }
 }
